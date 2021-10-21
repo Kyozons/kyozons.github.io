@@ -1,1 +1,116 @@
-templates/app.html
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>Calculadora Promedios</title>
+    <link
+      rel="stylesheet"
+      href="/static/app.css"
+      />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu|Lora">	
+  </head>
+  <body>
+    <div class="header">
+      <h2>Calcula tu promedio con Porcentajes!</h2>
+    </div>
+
+    <!-- Form -->
+    <div class="container">
+      <label for="ejemplo" id="ejemplo">Ejemplo</label>
+      <input type="text"  id="ej1" name="ej1" disabled value="65">
+      <input type="text" id="ej2" name="ej2" disabled value="30">
+      <form action="/calcular" method="post">
+
+        <div class="form-group">
+	  <label for="nota1">Nota 1</label>
+	  <input type="text" id="nota1" placeholder="0" name="nota1"  value="0" pattern="[0-9]{1,2}" title="Si no se usa, deja un 0"  required/>
+	  <label for"porc1">Porcentaje</label>
+	  <input type="text" id="porc1" placeholder="0" name="porc1" value="0" pattern="[0-9]{1,2}"  title="Si no se usa, deja un 0"  required/>
+        </div>
+        <div class="form-group">
+	   <label for="nota2">Nota 2</label>
+      	   <input type="text" id="nota2" placeholder="0" name="nota2" value="0" pattern="[0-9]{1,2}"  title="Si no se usa, deja un 0"  required />
+	   <label for"porc2">Porcentaje</label>
+	   <input type="text" id="porc2" placeholder="0" name="porc2" value="0" pattern="[0-9]{1,2}"  title="Si no se usa, deja un 0"  required/>
+        </div>
+
+         <div class="form-group">
+	   <label for="nota3">Nota 3</label>
+      	   <input type="text" id="nota3" placeholder="0" name="nota3"  value="0" pattern="[0-9]{1,2}"  title="Si no se usa, deja un 0"  required/>
+	   <label for"porc3">Porcentaje</label>
+	   <input type="text" id="porc3" placeholder="0" name="porc3" value="0" pattern="[0-9]{1,2}"  title="Si no se usa, deja un 0" required/>
+        </div>
+
+	<div class="form-group">
+	   <label for="nota4">Nota 4</label>
+      	   <input type="text" id="nota4" placeholder="0" name="nota4"  value="0" pattern="[0-9]{1,2}"  title="Si no se usa, deja un 0"  required/>
+	   <label for"porc4">Porcentaje</label>
+	   <input type="text" id="porc4" placeholder="0" name="porc4" value="0" pattern="[0-9]{1,2}"  title="Si no se usa, deja un 0" required/>
+        </div>
+
+	<div class="form-group">
+	   <label for="nota5">Nota 5</label>
+      	   <input type="text" id="nota5" placeholder="0" name="nota5"  value="0" pattern="[0-9]{1,2}"  title="Si no se usa, deja un 0"  required/>
+	   <label for"porc5">Porcentaje</label>
+	   <input type="text" id="porc5" placeholder="0" name="porc5" value="0" pattern="[0-9]{1,2}"  title="Si no se usa, deja un 0" required/>
+        </div>
+
+	<div class="form-group">
+	   <label for="nota6">Nota 6</label>
+      	   <input type="text" id="nota6" placeholder="0" name="nota6"  value="0" pattern="[0-9]{1,2}"  title="Si no se usa, deja un 0"  required/>
+	   <label for"porc6">Porcentaje</label>
+	   <input type="text" id="porc6" placeholder="0" name="porc6" value="0" pattern="[0-9]{1,2}"  title="Si no se usa, deja un 0" required/>
+        </div>
+
+	<div class="form-group">
+	   <label for="nota7">Nota 7</label>
+      	   <input type="text" id="nota7" placeholder="0" name="nota7"  value="0" pattern="[0-9]{1,2}"  title="Si no se usa, deja un 0"  required/>
+	   <label for"porc7">Porcentaje</label>
+	   <input type="text" id="porc7" placeholder="0" name="porc7" value="0" pattern="[0-9]{1,2}"  title="Si no se usa, deja un 0" required/>
+        </div>
+	
+	<div class="form-group">
+	   <label for="nota8">Nota 8</label>
+      	   <input type="text" id="nota8" placeholder="0" name="nota8"  value="0" pattern="[0-9]{1,2}"  title="Si no se usa, deja un 0"  required/>
+	   <label for"porc8">Porcentaje</label>
+	   <input type="text" id="porc8" placeholder="0" name="porc8" value="0" pattern="[0-9]{1,2}"  title="Si no se usa, deja un 0" required/>
+        </div>
+
+	<div class="form-group">
+	   <label for="nota9">Nota 9</label>
+      	   <input type="text" id="nota9" placeholder="0" name="nota9"  value="0" pattern="[0-9]{1,2}"  title="Si no se usa, deja un 0"  required/>
+	   <label for"porc9">Porcentaje</label>
+	   <input type="text" id="porc9" placeholder="0" name="porc9" value="0" pattern="[0-9]{1,2}"  title="Si no se usa, deja un 0" required/>
+        </div>
+
+	<div class="form-group">
+	   <label for="nota10">Nota 10</label>
+      	   <input type="text" id="nota10" placeholder="0" name="nota10"  value="0" pattern="[0-9]{1,2}"  title="Si no se usa, deja un 0"  required/>
+	   <label for"porc10">Porcentaje</label>
+	   <input type="text" id="porc10" placeholder="0" name="porc10" value="0" pattern="[0-9]{1,2}"  title="Si no se usa, deja un 0" required/>
+        </div>
+
+	<div class="form-group">
+	   <label for="nota11">Nota 11</label>
+      	   <input type="text" id="nota11" placeholder="0" name="nota11"  value="0" pattern="[0-9]{1,2}"  title="Si no se usa, deja un 0"  required/>
+	   <label for"porc11">Porcentaje</label>
+	   <input type="text" id="porc11" placeholder="0" name="porc11" value="0" pattern="[0-9]{1,2}"  title="Si no se usa, deja un 0" required/>
+        </div> 
+
+	<div class="form-group">
+	   <label for="nota12">Nota 12</label>
+      	   <input type="text" id="nota12" placeholder="0" name="nota12"  value="0" pattern="[0-9]{1,2}"  title="Si no se usa, deja un 0"  required/>
+	   <label for"porc12">Porcentaje</label>
+	   <input type="text" id="porc12" placeholder="0" name="porc12" value="0" pattern="[0-9]{1,2}"  title="Si no se usa, deja un 0" required/>
+        </div>
+	
+        <input type="submit" value="calcular" id="btn_calc" class="btn" />
+        <br />
+        <div class="alert" id="alert">
+	  
+        </div>
+      </form>
+
+    </div> 
+  </body>
+</html>
