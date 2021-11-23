@@ -1,0 +1,26 @@
+<!Doctype html>
+
+<html>
+	<head>
+		<title>Calculadora Promedios</title>
+	</head>
+	<body>
+		<div class="header">
+			<h2>Calcula tu promedio con porcentajes!</h2>
+		</div>
+		
+		<!-- Form-->
+		<div class="container">
+			<label for="ejemplo" id="ejemplo">Ejemplo</label>
+			<input type="text" id="ej1" name="ej1" disabled value="65">
+			<input type="text" id="ej2" name"ej2" disabled value="30">
+			<form method="post" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>">
+			
+			<div class="form-group">
+				<label for="nota1">Nota 1</label>
+				<input type="text" id="nota1" name="nota1" placeholder="0" value="0" pattern="[0-9]{1,2}" title="si no se usa, deja un 0" required/>
+				<label for="porc1">Porcentaje</label>
+				<input type="text" id="porc1" name="porc1" placeholder="0" value="0" pattern="[0-9]{1,2}" title="si no se usa, deja un 0" required/>
+			</div>	
+
+</html>
